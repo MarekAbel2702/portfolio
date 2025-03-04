@@ -3,58 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Marek Abel</title>
+    <title>Projekty - Marek Abel</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <img src="zdjecie_portfolio.png" alt="zdjecie_portfolio">
-       <nav>
-        <ul>
-            <a href="index.html"><li>Strona głowna</li></a>
-            <a href="o_mnie.html"><li>O mnie</li></a>
-            <a href="umiejetnosci.html"><li>Umiejętności</li></a>
-            <a href="projekty.html"><li>Projekty</li></a>
-            <a href="kontakt.html"><li>Kontakt</li></a>
-        </ul>
-       </nav> 
-       <p>Język</p>
-       <form action="#" method="post">
-            <label for="language_pl">Język polski</label>
-            <input type="radio" name="language" id="language_pl" checked>
-            <label for="language_eng">Język angielski</label>
-            <input type="radio" name="language" id="language_eng">
-       </form>
+        <img src="zdjecie_portfolio.png" alt="Zdjęcie Portfolio">
+        <nav>
+            <ul>
+                <li><a href="index.html">Strona główna</a></li>
+                <li><a href="o_mnie.html">O mnie</a></li>
+                <li><a href="umiejetnosci.html">Umiejętności</a></li>
+                <li><a href="projekty.html">Projekty</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+        <div class="form-jezyk">
+            <p>Język</p>
+            <form action="#" method="post">
+                <label for="language_pl">PL</label>
+                <input type="radio" name="language" id="language_pl" checked>
+                <label for="language_eng">EN</label>
+                <input type="radio" name="language" id="language_eng">
+            </form>
     </header>
+
     <section>
-        <h1>O mnie</h1>
+        <h1>Moje Projekty</h1>
         <div class="projekty">
             <div class="projekt">
-                <h3>Tytuł: Students Database</h3>
-                <p>Opis: Students Database to aplikacja napisana w C#, służąca do zarządzania danymi 
-                    studentów. Umożliwia dodawanie, edytowanie, usuwanie i przeszukiwanie informacji o 
-                    studentach w bazie danych.</p>
-                <p>Technologie</p>
-                <ul>
+                <h3>Students Database</h3>
+                <p>Aplikacja napisana w C#, służąca do zarządzania danymi studentów.</p><br>
+                <h3>Technologie</h3>
+                <ul class="technologia">
                     <li>C#</li>
-                    <li>.Net</li>
+                    <li>.NET</li>
                     <li>SQL</li>
-                    <li>T-SQL</li>
                     <li>Entity Framework</li>
                     <li>ASP.NET MVC</li>
-                    <li>MS SQL</li>
                 </ul>
-                <a href="#">Więcej informacji</a>
+                <a href="students_database.html">Więcej informacji</a>
             </div>
         </div>
     </section>
+    
+
     <footer>
-        <p>Imię i nazwisko: Marek Abel</p>
-        <p>© 2024. Wszystkie prawa zastrzeżone</p>
+        <p>&copy; 2025 Marek Abel | Wszystkie prawa zastrzeżone</p>
         <div class="linki">
             <ul>
-                <a target="_blank" href="https://github.com/MarekAbel2702"><li>Github</li></a>
-                <a target="_blank" href="https://www.linkedin.com/in/marek-abel-655723348/"><li>Linkedln</li></a>
-                <li>E-mail: marek-abel@wp.pl</li>
+                <li><a href="https://github.com/MarekAbel2702" target="_blank">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/marek-abel-655723348/" target="_blank">LinkedIn</a></li>
+                <li>E-mail: <a href="mailto:marek-abel@wp.pl">marek-abel@wp.pl</a></li>
             </ul>
         </div>
     </footer>
