@@ -77,11 +77,66 @@ nav ul li a:hover {
 
 /* --- SEKCJA JĘZYKA --- */
 .form-jezyk {
-    padding: 10px;
+    padding: 15px;
     background: rgba(244, 225, 161, 0.2);
-    border-radius: 10px;
-    width: 180px;
+    border-radius: 12px;
+    width: 220px;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.form-jezyk:hover {
+    transform: scale(1.05);
+}
+
+.language-label {
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 8px 15px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s ease;
+    border-radius: 25px;
+    display: inline-block;
+    margin: 5px;
+    color: #333;
+    background-color: #e0e0e0; /* Domyślny kolor tła */
+}
+
+/* Zmiana tła i koloru tekstu dla aktywnego języka */
+.language-radio:checked + .language-label {
+    background-color: #4CAF50;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover dla nieaktywnego języka */
+.language-radio:not(:checked) + .language-label:hover {
+    background-color: #f2f2f2;
+    color: #333;
+    transform: scale(1.1); /* Powiększenie przy najechaniu */
+    animation: hoverEffect 0.3s ease-out; /* Animacja przy hover */
+}
+
+/* Zmiana tła po najechaniu na aktywną etykietę */
+.language-radio:checked + .language-label:hover {
+    background-color: #45a049; /* Jaśniejszy odcień zielonego */
+    color: white;
+}
+
+/* Ukrywanie przycisków radiowych */
+.language-radio {
+    display: none;
+}
+
+
+@keyframes hoverEffect {
+    0% {
+        background-color: #e0e0e0;
+    }
+    100% {
+        background-color: #f2f2f2;
+    }
 }
 
 /* --- SEKCJE GŁÓWNE --- */

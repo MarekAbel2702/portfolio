@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Marek Abel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <img src="zdjecie_portfolio.png" alt="Portfolio Image">
+        <nav>
+            <ul>
+                <li><a href="index_eng.html">Home</a></li>
+                <li><a href="o_mnie_eng.html">About Me</a></li>
+                <li><a href="umiejetnosci_eng.html">Skills</a></li>
+                <li><a href="projekty_eng.html">Projects</a></li>
+                <li><a href="kontakt_eng.html">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <div class="form-jezyk">
+            <p>Language</p>
+            <form action="#" method="post" id="languageForm">
+                <input type="radio" name="language" id="language_pl" class="language-radio">
+                <label for="language_pl" class="language-label">PL</label>
+                <input type="radio" name="language" id="language_eng" checked class="language-radio">
+                <label for="language_eng" class="language-label">EN</label>
+            </form>
+        </div>
+        
+        <script>
+            document.getElementById('languageForm').addEventListener('change', function(event) {
+                if (document.getElementById('language_pl').checked) {
+                    window.location.href = 'index.html';  
+                } else if (document.getElementById('language_eng').checked) {
+                    window.location.href = 'index_eng.html';  
+                }
+            });
+        </script>
+    </header>
+
+    <section>
+        <h1>About Me</h1>
+        <div class="o_mnie">   
+            <p><strong>Hello! My name is Marek Abel.</strong>  
+                I am a Data Analyst, Data Scientist, and C# Developer with a passion for working with data and 
+                programming. I enjoy analyzing information and using it to make better 
+                business decisions.</p><br>
+            <h2>💡 My specializations include:</h2>
+            <ul class="skills-list">
+                <li>✅ Data analysis and database optimization (SQL, Power BI, Excel)</li>
+                <li>✅ Programming in C# and application development</li>
+                <li>✅ Database management</li>
+            </ul><br>
+            <p>Outside of work, I love playing chess, football, and volleyball.  
+               I am a person who constantly develops and looks for new challenges – both in the tech world and beyond.</p>
+            <p class="cta">If you want to see my projects or collaborate, feel free to contact me! 🚀</p>
+            <br>
+            <h2>💡 Professional Experience:</h2>
+            <p style="text-align: center; padding: 15px;"><strong>2024-05 – 2024-07<br> Internship at I Liceum Ogólnokształcące im. Stanisława Staszica, Lublin</strong><br> 
+                <h4>Responsibilities:</h4>
+                <ul class="skills-list">
+                    <li>✅ Installation and configuration of computer and multimedia equipment;</li>
+                    <li>✅ Updating information on the school's website;</li>
+                    <li>✅ Assisting with daily IT tasks;</li>
+                </ul>
+            <p style="text-align: center; padding: 15px;"><strong>2021-10 – 2021-11<br> Internship at VICO – Computer Store and Service, Lublin</strong><br> 
+                <h4>Responsibilities:</h4>
+                <ul class="skills-list">
+                    <li>✅ Assembling computer components;</li>
+                    <li>✅ Installing drivers for peripheral devices of the computer system;</li>
+                    <li>✅ Configuring system settings according to client preferences;</li>
+                </ul>
+                <p style="text-align: center; padding: 15px;"><strong>2020-09 – 2020-10<br> Internship at District Office, Lublin</strong><br> 
+                    <h4>Responsibilities:</h4>
+                    <ul class="skills-list">
+                        <li>✅ Managing directory services in Windows Server;</li>
+                        <li>✅ Preparing network devices for operation;</li>
+                        <li>✅ Installing network cabling;</li>
+                        <li>✅ Administering server operating systems;</li>
+                    </ul><br>
+            <p><a href="projekty_eng.html" class="btn">See my projects</a></p>
+            <p><a href="kontakt_eng.html" class="btn">Contact</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Marek Abel | All rights reserved</p>
+        <div class="linki">
+            <ul>
+                <li><a href="https://github.com/MarekAbel2702" target="_blank">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/marek-abel-655723348/" target="_blank">LinkedIn</a></li>
+                <li>Email: <a href="mailto:marek-abel@wp.pl">marek-abel@wp.pl</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>

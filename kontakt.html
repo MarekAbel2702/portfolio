@@ -19,13 +19,24 @@
             </ul>
         </nav>
         <div class="form-jezyk">
-            <p>Język</p>
-            <form action="#" method="post">
-                <label for="language_pl">PL</label>
-                <input type="radio" name="language" id="language_pl" checked>
-                <label for="language_eng">EN</label>
-                <input type="radio" name="language" id="language_eng">
+            <p>Language</p>
+            <form action="#" method="post" id="languageForm">
+                <input type="radio" name="language" id="language_pl" checked class="language-radio">
+                <label for="language_pl" class="language-label">PL</label>
+                <input type="radio" name="language" id="language_eng" class="language-radio">
+                <label for="language_eng" class="language-label">EN</label>
             </form>
+        </div>
+        
+        <script>
+            document.getElementById('languageForm').addEventListener('change', function(event) {
+                if (document.getElementById('language_pl').checked) {
+                    window.location.href = 'index.html';  
+                } else if (document.getElementById('language_eng').checked) {
+                    window.location.href = 'index_eng.html';  
+                }
+            });
+        </script>
     </header>
 
     <section>
