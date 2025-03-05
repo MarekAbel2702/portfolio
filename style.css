@@ -16,11 +16,6 @@ body {
     align-items: center;
 }
 
-/* ANIMACJA TŁA */
-@keyframes backgroundFade {
-    0% { background: linear-gradient(135deg, #2c003e, #6a0080, #3a005f); }
-    100% { background: linear-gradient(135deg, #3a005f, #6a0080, #2c003e); }
-}
 
 /* --- HEADER --- */
 header {
@@ -436,7 +431,7 @@ footer .linki ul li a:hover {
     }
 
     section > .strona_glowna > div > img {
-        width: 100%
+        width: 80%
     }
     nav ul {
         flex-direction: column;
