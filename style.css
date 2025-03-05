@@ -431,7 +431,7 @@ footer .linki ul li a:hover {
     }
 
     section > .strona_glowna > div > img {
-        width: 80%
+        width: 100%
     }
     nav ul {
         flex-direction: column;
