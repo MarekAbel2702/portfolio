@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Reservation Analysis - Project Overview</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="top-navbar">
+        <ul class="nav-list">
+            <li><a href="index_eng.html">🏠 Home</a></li>
+            <li><a href="projekty_eng.html"> 📚 Projects</a></li>
+            <li><a href="https://github.com/MarekAbel2702/Students-database" target="_blank">🔗 GitHub</a></li>
+        </ul>
+    </nav>
+
+    <header class="project-header">
+        <h1>Online Store</h1>
+        <p>Order Management System</p>
+    </header>
+
+    <section class="project-container">
+        <div class="project-section">
+            <h2>Project Description</h2>
+            <p>
+                The project presents a complete database system for an online store, created with practical use of 
+                SQL, T-SQL, optimization, and data security in mind. It includes the full project cycle: 
+                from relational modeling, through implementation of structures and procedures, to security and backup handling.
+            </p>
+        </div>
+        <div class="project-section">
+            <h2>Technologies Used</h2>
+                <ul class="tech-list">
+                    <li>SQL</li>
+                    <li>T-SQL</li>
+                    <li>Git</li>
+                </ul>
+        </div>
+
+        <div class="project-section">
+            <h2>🧱 Database Structure</h2>
+            <ul class="project-list" style="text-align: left; list-style-type: none; padding: 5px;">
+                <li>✅ Tables: Customers, Products, Orders, OrderDetails, Payments, Deliveries, Categories, ProductHistory.</li>
+                <li>✅ Data types selected according to their purpose.</li>
+                <li>✅ Default values and constraints (e.g., CHECK, DEFAULT, UNIQUE).</li>
+            </ul>
+        </div>
+
+        <div class="project-section">
+            <h2>⚙️ Stored Procedures</h2>
+            <ul class="project-list" style="text-align: left; list-style-type: none; padding: 5px;">
+                <li>✅ sp_AddOrder – creates an order based on JSON input, automatically 
+                    calculates value and updates inventory.</li>
+                <li>✅ sp_ChangeOrderStatus – updates order status with validation.</li>
+                <li>✅ sp_SalesReport – generates a monthly sales report.</li>
+                <li>✅ sp_HandleDelivery – automatically creates delivery record for an order.</li>
+                <li>✅ sp_TopCustomers – returns a list of highest-spending customers.</li>
+            </ul>
+        </div>
+
+        <div class="project-section">
+            <h2>🧠 Trigger</h2>
+            <ul class="project-list" style="text-align: left; list-style-type: none; padding: 5px;">
+                <li>✅ trg_LogProductPriceChanges – automatically logs changes in product prices 
+                    to the history table (ProductHistory), including date and user.</li>
+            </ul>
+        </div>
+
+        <div class="project-section">
+            <h2>⚡ Optimization</h2>
+            <ul class="project-list" style="text-align: left; list-style-type: none; padding: 5px;">
+                <li>✅ Indexes on frequently filtered columns (e.g., customerId, orderId, productId).</li>
+                <li>✅ CHECK and DEFAULT constraints to ensure data integrity.</li>
+            </ul>
+        </div>
+
+        <div class="project-section">
+            <h2>🔐 Data Security</h2>
+            <ul class="project-list" style="text-align: left; list-style-type: none; padding: 5px;">
+                <li>✅ Created SQL logins dedicated to specific user roles.</li>
+                <li>✅ Assigned only necessary permissions (principle of least privilege).</li>
+                <li>✅ Project uses Dynamic Data Masking to prevent sensitive data leaks.</li>
+            </ul>
+        </div>
+
+        <div class="project-section">
+            <h2>💾 Backup and Restore</h2>
+            <ul class="project-list" style="text-align: left; list-style-type: none; padding: 5px;">
+                <li>✅ Backups were regularly created throughout the project development.</li>
+            </ul>
+        </div>
+
+        <div class="github-container">
+            <a href="https://github.com/MarekAbel2702/sklep_internetowy_database" target="_blank" class="github-button">View on GitHub</a>
+        </div>
+    </section>
+
+    <footer class="footer-bar">
+        <p>&copy; 2025 Marek Abel | All rights reserved</p>
+        <div class="linki">
+            <ul>
+                <li><a href="https://github.com/MarekAbel2702" target="_blank">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/marek-abel-655723348/" target="_blank">LinkedIn</a></li>
+                <li>Email: <a href="mailto:marek-abel@wp.pl">marek-abel@wp.pl</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>

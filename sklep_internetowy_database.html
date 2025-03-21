@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analiza Rezerwacji Hotelowych - Opis Projektu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="top-navbar">
+        <ul class="nav-list">
+            <li><a href="index.html">🏠 Strona Główna</a></li>
+            <li><a href="projekty.html">📚 Projekty</a></li>
+            <li><a href="https://github.com/MarekAbel2702/system_rezerwacji_hotelowych" target="_blank">🔗 GitHub</a></li>
+        </ul>
+    </nav>
+
+    <header class="project-header">
+        <h1>Sklep Internetowy</h1>
+        <p>System Zarządzania Zamówieniami</p>
+    </header>
+
+    <section class="project-container">
+        <div class="project-section">
+            <h2>Opis Projektu</h2>
+            <p>
+                Projekt przedstawia kompletny system bazy danych dla sklepu internetowego, stworzony z 
+                myślą o praktycznym zastosowaniu wiedzy z zakresu SQL, T-SQL, optymalizacji oraz bezpieczeństwa danych. 
+                Zawiera pełen cykl projektowy: od modelu relacyjnego, przez implementację struktur i procedur, 
+                aż po zabezpieczenia i kopie zapasowe.
+            </p>
+        </div>
+        <div class="project-section">
+            <h2>Użyte Technologie</h2>
+                <ul class="tech-list">
+                    <li>SQL</li>
+                    <li>T-SQL</li>
+                    <li>Git</li>
+                </ul>
+        </div>
+
+        <div class="project-section">
+            <h2>🧱 Struktura bazy danych</h2>
+            <ul class="project-list" style="text-align: left; list-style-type: none; padding: 5px;">
+                <li>✅ Tabele: Klienci, Produkty, Zamówienia, SzczegółyZamówienia, Płatności, 
+                    Dostawy, Kategorie, HistoriaProduktów.</li>
+                <li>✅ Typy danych dobrane zgodnie z przeznaczeniem.</li>
+                <li>✅ Domyślne wartości i ograniczenia (np. CHECK, DEFAULT, UNIQUE).</li>
+            </ul>
+        </div>
+
+        <div class="project-section">
+            <h2>⚙️ Procedury składowane</h2>
+            <ul class="project-list" style="text-align: left; list-style-type: none; padding: 5px;">
+                <li>✅ sp_DodajZamowienie – tworzenie zamówienia na podstawie danych w formacie JSON, 
+                    z automatycznym obliczaniem wartości oraz aktualizacją stanu magazynowego.</li>
+                <li>✅ sp_ZmienStatusZamowienia – aktualizacja statusu zamówienia z walidacją.</li>
+                <li>✅ sp_RaportSprzedazy – generowanie raportu miesięcznej sprzedaży.</li>
+                <li>✅ sp_ObslugaDostawy – automatyczne tworzenie rekordu dostawy dla zamówienia.</li>
+                <li>✅ sp_TopKlienci – zestawienie klientów z największymi wydatkami.</li>
+            </ul>
+        </div>
+
+        <div class="project-section">
+            <h2>🧠 Trigger</h2>
+            <ul class="project-list" style="text-align: left; list-style-type: none; padding: 5px;">
+                <li>✅ trg_LogowanieZmianProduktow – automatyczne rejestrowanie zmian cen produktów do 
+                    tabeli historii (HistoriaProduktow), z datą i użytkownikiem, który zmiany dokonał.</li>
+            </ul>
+        </div>
+
+        <div class="project-section">
+            <h2>⚡ Optymalizacja</h2>
+            <ul class="project-list" style="text-align: left; list-style-type: none; padding: 5px;">
+                <li>✅ Indeksy na często filtrowanych kolumnach (np. idKlienta, idZamowienia, idProduktu).</li>
+                <li>✅ CHECK i DEFAULT zabezpieczające dane.</li>
+            </ul>
+        </div>
+
+        <div class="project-section">
+            <h2>🔐 Bezpieczeństwo danych</h2>
+            <ul class="project-list" style="text-align: left; list-style-type: none; padding: 5px;">
+                <li>✅ Utworzenie kont SQL dedykowanych dla różnych typów użytkowników</li>
+                <li>✅ Przypisanie im tylko tych uprawnień, które są niezbędne</li>
+                <li>✅ Projekt wykorzystuje Dynamic Data Masking, aby zapobiec wyciekom danych osobowych.</li>
+            </ul>
+        </div>
+
+        <div class="project-section">
+            <h2>💾 Backup i restore</h2>
+            <ul class="project-list" style="text-align: left; list-style-type: none; padding: 5px;">
+                <li>✅ Podczas tworzenia projektu wielkrotnie tworzono kopie zapasowe.</li>
+            </ul>
+        </div>
+
+        <div class="github-container">
+            <a href="https://github.com/MarekAbel2702/sklep_internetowy_database" target="_blank" class="github-button">Zobacz na GitHub</a>
+        </div>
+    </section>
+
+    <footer class="footer-bar">
+        <p>&copy; 2025 Marek Abel | Wszystkie prawa zastrzeżone</p>
+        <div class="linki">
+            <ul>
+                <li><a href="https://github.com/MarekAbel2702" target="_blank">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/marek-abel-655723348/" target="_blank">LinkedIn</a></li>
+                <li>E-mail: <a href="mailto:marek-abel@wp.pl">marek-abel@wp.pl</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>
