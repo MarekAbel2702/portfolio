@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Monitoringu Logów</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="top-navbar">
+        <ul class="nav-list">
+            <li><a href="index.html">🏠 Strona Główna</a></li>
+            <li><a href="projekty.html">📚 Projekty</a></li>
+            <li><a href="https://github.com/MarekAbel2702/system_rezerwacji_hotelowych" target="_blank">🔗 GitHub</a></li>
+        </ul>
+    </nav>
+
+    <header class="project-header">
+        <h1>System Monitoringu Logów</h1>
+        <p>System analizy i monitoringu logów aplikacji</p>
+    </header>
+
+    <section class="project-container">
+        <div class="project-section">
+            <h2>Opis Projektu</h2>
+            <p>
+                Projekt przedstawia kompletny system analizy danych z plików logów. Rozwiązanie umożliwia automatyczne 
+                przetwarzanie logów aplikacyjnych zapisanych w pliku tekstowym, ich strukturalne zapisanie w relacyjnej 
+                bazie danych oraz eksport i prezentację w różnych formatach i formach graficznych.
+                System składa się z kilku niezależnych modułów, które odpowiadają za poszczególne etapy: parsowanie danych, 
+                komunikację z bazą, eksport oraz analizę i wizualizację. Projekt został zaprojektowany z naciskiem na 
+                czytelność, rozszerzalność i praktyczne zastosowanie.
+            </p>
+        </div>
+        <div class="project-section">
+            <h2>Użyte Technologie</h2>
+                <ul class="tech-list">
+                    <li>Python</li>
+                    <li>SQL</li>
+                    <li>Matplotlib</li>
+                    <li>Pandas</li>
+                    <li>Seaborn</li>
+                    <li>Git</li>
+                </ul>
+        </div>
+
+        <div class="project-section">
+            <h2>📝 Zakres prac:</h2>
+            <ul class="project-list" style="text-align: left; list-style-type: none; padding: 5px;">
+                <li>✅ Projektowanie bazy danych: zaprojektowałem relacyjną strukturę (tabela Logs), umożliwiającą 
+                    przechowywanie danych z logów w MS SQL Server.</li>
+                <li>✅ Parsowanie logów: stworzyłem parser w Pythonie, który rozpoznaje strukturę wpisów logów 
+                    (data, poziom, wiadomość) z plików tekstowych.</li>
+                <li>✅ Integracja z bazą danych: połączenie Pythona z MS SQL Server przy użyciu 
+                    pyodbc – dane z logów zapisywane są automatycznie do bazy.</li>
+                <li>✅ Eksport danych: zaimplementowałem moduł eksportujący dane z bazy do plików 
+                    w formatach (CSV, JSON, XML, HTML)</li>
+                <li>✅ Wizualizacja danych: przygotowałem graficzną analizę danych przy użyciu matplotlib i seaborn</li>
+                <li>✅ Organizacja projektu: kod został podzielony na logiczne moduły, co ułatwia rozwój, 
+                    testowanie i utrzymanie.</li>
+            </ul>
+        </div>
+
+        <div class="github-container">
+            <a href="https://github.com/MarekAbel2702/system_monitoringu_i_analizy_logow_aplikacji" target="_blank" class="github-button">Zobacz na GitHub</a>
+        </div>
+    </section>
+
+    <footer class="footer-bar">
+        <p>&copy; 2025 Marek Abel | Wszystkie prawa zastrzeżone</p>
+        <div class="linki">
+            <ul>
+                <li><a href="https://github.com/MarekAbel2702" target="_blank">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/marek-abel-655723348/" target="_blank">LinkedIn</a></li>
+                <li>E-mail: <a href="mailto:marek-abel@wp.pl">marek-abel@wp.pl</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>
