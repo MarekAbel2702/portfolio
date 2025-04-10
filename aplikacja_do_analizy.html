@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikacja analizy danych - Opis Projektu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="top-navbar">
+        <ul class="nav-list">
+            <li><a href="index.html">🏠 Strona Główna</a></li>
+            <li><a href="projekty.html">📚 Projekty</a></li>
+            <li><a href="https://github.com/MarekAbel2702/system_rezerwacji_hotelowych" target="_blank">🔗 GitHub</a></li>
+        </ul>
+    </nav>
+
+    <header class="project-header">
+        <h1>Aplikacja desktopowa do analizy danych sprzedażowych</h1>
+        <p>Aplikacja analizy danych</p>
+    </header>
+
+    <section class="project-container">
+        <div class="project-section">
+            <h2>Opis Projektu</h2>
+            <p>
+                Stworzyłem aplikację desktopową umożliwiającą analizę danych sprzedażowych. 
+                System łączy się z bazą danych MS SQL Server, pozwala na dodawanie i przeglądanie zamówień, 
+                a także generuje dynamiczne wizualizacje danych w oparciu o wykresy słupkowe, liniowe i kołowe. 
+                Aplikacja posiada intuicyjny interfejs graficzny oparty na customtkinter, co zapewnia nowoczesny 
+                wygląd i wysoką użyteczność.
+            </p>
+        </div>
+        <div class="project-section">
+            <h2>Użyte Technologie</h2>
+                <ul class="tech-list">
+                    <li>Python</li>
+                    <li>SQL</li>
+                    <li>T-SQL</li>
+                    <li>PyODBC</li>
+                    <li>CustomTkinter</li>
+                    <li>Matplotlib</li>
+                    <li>Pandas</li>
+                    <li>Git</li>
+                </ul>
+        </div>
+
+        <div class="project-section">
+            <h2>📝 Zakres prac:</h2>
+            <ul class="project-list" style="text-align: left; list-style-type: none; padding: 5px;">
+                <li>🔧 Zaprojektowałem strukturę relacyjnej bazy danych (Users, Products, Orders) z kluczami obcymi</li>
+                <li>🧠 Stworzyłem 10 procedur składowanych (np. dodawanie zamówienia, sumowanie wydatków) 
+                    i 10 triggerów w T-SQL</li>
+                <li>🔌 Zintegrowałem bazę danych z Pythonem przy użyciu pyodbc</li>
+                <li>📊 Zbudowałem rozbudowane GUI w customtkinter z podziałem na zakładki(Dodawanie zamówienia,
+                    Sprawdzanie sumy wydatków użytkownika, Generowanie wykresów)</li>
+                <li>📈 Wygenerowałem dynamiczne wizualizacje danych z użyciem matplotlib (Wykres słupkowy: 
+                    suma zamówień wg użytkowników, Wykres liniowy: trend dziennej sprzedaży, Wykres kołowy: 
+                    udział kategorii produktów w sprzedaży)</li>
+                <li>🧼 Dodałem zabezpieczenia przed błędami GUI oraz obsługę wyjątków</li>
+            </ul>
+        </div>
+
+        <div class="github-container">
+            <a href="https://github.com/MarekAbel2702/aplikacja_do_analizy_danych" target="_blank" class="github-button">Zobacz na GitHub</a>
+        </div>
+    </section>
+
+    <footer class="footer-bar">
+        <p>&copy; 2025 Marek Abel | Wszystkie prawa zastrzeżone</p>
+        <div class="linki">
+            <ul>
+                <li><a href="https://github.com/MarekAbel2702" target="_blank">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/marek-abel-655723348/" target="_blank">LinkedIn</a></li>
+                <li>E-mail: <a href="mailto:marek-abel@wp.pl">marek-abel@wp.pl</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>
