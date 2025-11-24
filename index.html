@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      color: #0a2a43;
+    }
+
+    header {
+      background: #0a4f9e;
+      color: white;
+      padding: 20px 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 100px 20px 60px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #0a4f9e;
+      margin-bottom: 20px;
+    }
+
+    .progress {
+      margin-bottom: 20px;
+    }
+
+    .project-card {
+      background: #e6f0ff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+
+    footer {
+      background: #0a4f9e;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .hero-section {
+  padding: 120px 20px 80px;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero-text {
+  flex: 1 1 320px;
+}
+
+.hero-text h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #0a4f9e;
+}
+
+.hero-text h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #0a2a43;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: #e6f0ff;
+  color: #0a4f9e;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.hero-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 12px 24px;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.hero-info-item span {
+  font-weight: bold;
+  color: #0a4f9e;
+}
+
+.hero-description {
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.hero-photo {
+  flex: 0 0 260px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-photo img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #e6f0ff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+  .hero-section {
+    padding-top: 100px;
+  }
+  .hero-text h1 {
+    font-size: 26px;
+  }
+  .hero-text h2 {
+    font-size: 18px;
+  }
+}
+
+/* Sekcja umiejętności */
+section#skills h2 {
+text-align: center;
+font-size: 32px;
+color: #0a4f9e;
+margin-bottom: 40px;
+}
+
+
+.umiejetnosci {
+max-width: 900px;
+margin: 0 auto;
+}
+
+
+.umiejetnosci h3 {
+margin-top: 40px;
+color: #0a2a43;
+font-size: 22px;
+display: flex;
+align-items: center;
+gap: 8px;
+}
+
+
+.umiejetnosci h3 span.icon {
+font-size: 22px;
+}
+
+
+.technologie, .frameworki, .jezyki, .dodatkowe {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+gap: 15px 30px;
+margin-top: 15px;
+}
+
+
+.skill {
+background: #e6f0ff;
+padding: 12px 16px;
+border-radius: 12px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+
+.skill span {
+font-weight: bold;
+display: block;
+margin-bottom: 6px;
+color: #0a4f9e;
+}
+
+
+.skill progress {
+width: 100%;
+height: 12px;
+appearance: none;
+}
+
+
+.skill progress::-webkit-progress-bar {
+background: #d9e7ff;
+border-radius: 8px;
+}
+
+
+.skill progress::-webkit-progress-value {
+background: #0a4f9e;
+border-radius: 8px;
+}
+
+
+.skill progress::-moz-progress-bar {
+background: #0a4f9e;
+border-radius: 8px;
+}
+
+.progress {
+margin-bottom: 20px;
+}
+
+
+.project-card {
+background: #e6f0ff;
+padding: 20px;
+margin-bottom: 20px;
+border-radius: 8px;
+}
+
+/* Sekcja aplikacji mobilnych */
+#apps h2 {
+text-align: center;
+font-size: 32px;
+color: #0a4f9e;
+margin-bottom: 40px;
+}
+
+
+.mobile-apps {
+max-width: 900px;
+margin: 0 auto;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 30px;
+}
+
+
+.app-card {
+background: #e6f0ff;
+padding: 20px;
+border-radius: 15px;
+box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+text-align: center;
+}
+
+
+.app-card img {
+width: 100%;
+height: 180px;
+object-fit: cover;
+border-radius: 10px;
+margin-bottom: 15px;
+}
+
+
+.app-card h3 {
+color: #0a2a43;
+margin-bottom: 10px;
+}
+
+
+.app-card p {
+font-size: 15px;
+line-height: 1.5;
+margin-bottom: 15px;
+}
+
+
+.app-btn {
+display: inline-block;
+background: #0a4f9e;
+color: white;
+padding: 10px 18px;
+border-radius: 8px;
+text-decoration: none;
+font-weight: bold;
+transition: 0.2s ease;
+}
+
+
+.app-btn:hover {
+background: #083b75;
+}
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="#start">Strona główna</a>
+      <a href="#about">O mnie</a>
+      <a href="#skills">Umiejętności</a>
+      <a href="#projects">Projekty</a>
+      <a href="#apps">Aplikacje mobilne</a>
+      <a href="#contact">Kontakt</a>
+    </nav>
+  </header>
+
+  <section id="start">
+    <section id="start" class="hero-section">
+  <div class="hero-text">
+    <div class="hero-badge">Portfolio – C# / .NET / Data</div>
+
+    <h1>Marek Abel</h1>
+    <h2>Junior .NET Developer</h2>
+
+    <div class="hero-info-grid">
+      <div class="hero-info-item">
+        <span>Imię i nazwisko:</span><br>
+        Marek Abel
+      </div>
+      <div class="hero-info-item">
+        <span>Student:</span><br>
+        Akademia WSEI, Inżynier
+      </div>
+      <div class="hero-info-item">
+        <span>Kierunek studiów:</span><br>
+        Informatyka
+      </div>
+      <div class="hero-info-item">
+        <span>Zawód:</span><br>
+        Junior .NET Developer,<br>
+      </div>
+    </div>
+
+    <p class="hero-description">
+      Cześć! Lubię pracować z danymi – analizować je, przetwarzać i wykorzystywać w praktycznych rozwiązaniach.
+      Zajmuję się także zarządzaniem bazami danych oraz programowaniem w C#. Tworzenie aplikacji i narzędzi,
+      które usprawniają pracę z danymi, sprawia mi dużą satysfakcję.
+      <br><br>
+      Poza programowaniem interesuję się administracją systemów i optymalizacją baz danych.
+      W wolnym czasie gram w szachy, a także lubię oglądać i grać w piłkę nożną oraz siatkówkę.
+      Stale rozwijam swoje umiejętności, bo lubię uczyć się nowych rzeczy i zdobywać doświadczenie.
+    </p>
+  </div>
+
+  <div class="hero-photo">
+    <!-- Podmień src na ścieżkę do Twojego zdjęcia -->
+    <img src="images/portfolio-photo.jpg" alt="Zdjęcie portfolio – Marek Abel">
+  </div>
+</section>
+
+  </section>
+<section id="about">
+  <h2>O mnie</h2>
+
+
+<p>
+Cześć! Nazywam się <strong>Marek Abel</strong>. Jestem Data Analystem, Data Scientistem oraz C# Developerem z pasją do pracy z danymi i programowania.
+Lubię analizować informacje i wykorzystywać je do tworzenia rozwiązań wspierających podejmowanie decyzji biznesowych.
+</p>
+
+
+<h3>Specjalizacje</h3>
+<ul>
+<li>Analiza danych i optymalizacja baz danych (SQL, Power BI, Excel)</li>
+<li>Programowanie w C# i tworzenie aplikacji</li>
+<li>Zarządzanie bazami danych</li>
+</ul>
+
+
+<p>
+Poza pracą uwielbiam grać w szachy, piłkę nożną oraz siatkówkę. Jestem osobą, która ciągle się rozwija
+i poszukuje nowych wyzwań – zarówno w świecie technologii, jak i poza nim.
+Jeśli chcesz zobaczyć moje projekty lub nawiązać współpracę, zapraszam do kontaktu!
+</p>
+
+
+<h3>Doświadczenie zawodowe</h3>
+
+
+<h4>2024-05 – 2024-07 — I Liceum Ogólnokształcące im. Stanisława Staszica, Lublin</h4>
+<ul>
+<li>Instalacja i konfiguracja sprzętu komputerowego i multimedialnego</li>
+<li>Aktualizacja informacji na stronie internetowej szkoły</li>
+<li>Pomoc w codziennych zadaniach informatycznych</li>
+</ul>
+
+
+<h4>2021-10 – 2021-11 — VICO – Sklep Komputerowy i Serwis, Lublin</h4>
+<ul>
+<li>Montowanie podzespołów w komputerze</li>
+<li>Instalacja sterowników urządzeń peryferyjnych</li>
+<li>Konfiguracja ustawień systemu operacyjnego według zaleceń klienta</li>
+</ul>
+
+
+<h4>2020-09 – 2020-10 — Starostwo Powiatowe, Lublin</h4>
+<ul>
+<li>Zarządzanie usługą katalogową w systemie Windows Server</li>
+<li>Przygotowywanie urządzeń sieciowych do pracy</li>
+<li>Montowanie okablowania sieciowego</li>
+<li>Administrowanie serwerowymi systemami operacyjnymi</li>
+</ul>
+
+
+</section>
+
+  <section id="skills">
+<h2>Umiejętności</h2>
+<div class="umiejetnosci">
+<h3><span class="icon">🛠</span> Technologie</h3>
+<div class="technologie">
+<div class="skill"><span>HTML5</span><progress value="80" max="100"></progress></div>
+<div class="skill"><span>SQL</span><progress value="75" max="100"></progress></div>
+<div class="skill"><span>CSS3</span><progress value="65" max="100"></progress></div>
+<div class="skill"><span>C#</span><progress value="60" max="100"></progress></div>
+<div class="skill"><span>Excel</span><progress value="50" max="100"></progress></div>
+<div class="skill"><span>.NET</span><progress value="40" max="100"></progress></div>
+<div class="skill"><span>Python</span><progress value="35" max="100"></progress></div>
+<div class="skill"><span>T-SQL</span><progress value="25" max="100"></progress></div>
+<div class="skill"><span>Power BI</span><progress value="15" max="100"></progress></div>
+</div>
+
+
+<h3><span class="icon">📚</span> Frameworki i biblioteki</h3>
+<div class="frameworki">
+<div class="skill"><span>Entity Framework</span><progress value="70" max="100"></progress></div>
+<div class="skill"><span>Matplotlib</span><progress value="60" max="100"></progress></div>
+<div class="skill"><span>ASP.NET MVC</span><progress value="35" max="100"></progress></div>
+<div class="skill"><span>Pandas</span><progress value="15" max="100"></progress></div>
+<div class="skill"><span>Numpy</span><progress value="5" max="100"></progress></div>
+</div>
+
+
+<h3><span class="icon">🌍</span> Języki</h3>
+<div class="jezyki">
+<div class="skill"><span>Polski</span><progress value="100" max="100"></progress></div>
+<div class="skill"><span>Angielski</span><progress value="55" max="100"></progress></div>
+</div>
+
+
+<h3><span class="icon">🎯</span> Dodatkowe umiejętności</h3>
+<div class="dodatkowe">
+<div class="skill"><span>Matematyka</span><progress value="55" max="100"></progress></div>
+<div class="skill"><span>Git</span><progress value="50" max="100"></progress></div>
+<div class="skill"><span>Statystyka</span><progress value="30" max="100"></progress></div>
+</div>
+</div>
+</section>
+
+  <section id="projects">
+    <h2>Projekty</h2>
+
+    <div class="project-card">
+      <h3>Projekt 1</h3>
+      <p>Opis projektu 1...</p>
+    </div>
+
+    <div class="project-card">
+      <h3>Projekt 2</h3>
+      <p>Opis projektu 2...</p>
+    </div>
+
+  </section>
+
+<section id="apps">
+<h2>Aplikacje mobilne</h2>
+
+
+<div class="mobile-apps">
+<div class="app-card">
+<img src="images/app-example.jpg" alt="Przykładowa aplikacja mobilna">
+<h3>FitTracker – Aplikacja Fitness</h3>
+<p>Aplikacja do śledzenia aktywności fizycznej, kalorii oraz postępów treningowych. Stworzona w technologii .NET MAUI z integracją lokalnej bazy danych SQLite.</p>
+<a class="app-btn" href="#">Zobacz projekt</a>
+<a class="app-btn" href="bmi_pp.html">Polityka prywatności</a>
+</div>
+</div>
+</section>
+
+  <footer id="contact">
+    <h2>Kontakt</h2>
+    <p>Email: twojmail@example.com</p>
+    <p>Telefon: +48 000 000 000</p>
+  </footer>
+
+</body>
+</html>
